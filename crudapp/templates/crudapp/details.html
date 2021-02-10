@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Logo</a>
+  <ul class="nav">
+    <li class="nav-item">
+    <a class="nav-link" href="{% url 'addstudent' %}">Register</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'details' %}">Details</a>
+  </li>
+  </ul>
+</nav>
+
+  <div class="container mt-5 col-md-19">
+  	<h2 class="alert alert-info text center">Details</h2>
+  	<table class="table table-bordered table-hover table-dark">
+  		<thead>
+  			<tr>
+  				<th>s.no</th>
+  				<th>first name</th>
+  				<th>last name</th>
+  				<th>user name</th>
+  				<th>roll no</th>
+  				<th>email</th>
+  				<th> mobile number</th>
+  				<th>gender</th>
+          <th>age</th>
+          <th colspan="2">Operattions</th>
+  			</tr>
+  		</thead>
+      <tbody>
+        {% for i in info %}
+        <tr>
+          <td>{{ i.id }}</td>
+          <td>{{ i.fname }}</td>
+          <td>{{ i.lname }}</td>
+          <td>{{ i.name }}</td>
+          <td>{{ i.rnum }}</td>
+          <td>{{ i.email }}</td>
+          <td>{{ i.mobile }}</td>
+          <td>{{ i.gender }}</td>
+          <td>{{ i.age }}</td>
+          <td><a class="btn btn-outline-success" href="{% url 'update' i.id %}">update</td>
+            <td><a class="btn btn-outline-danger" href="{% url 'delete' i.id %}">Delete</a></td>  
+        </tr>
+        {% endfor %}
+      </tbody>
+  	</table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">'
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+</head>
+	<body background="src" >
+		<div class="jumbotron text-center">
+			  <h1>My First Bootstrap Page</h1>
+			 
+		</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>
+    </div>
+  </div>
+</div>
+	
+			
+					<table class="table table-stripped table-bordered">
+						<thead>
+							<th>name</th>
+							<th>roll no</th>
+							<th>email</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>sonia</td>
+								<td>599</td>
+								<td>sweetyanjaneyulu99@gmail.com</td>
+							</tr>
+							<tr>
+								<td>pavani</td>
+								<td>597</td>
+								<td>tummurupavani818@gmail.com</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				
+		
+		<div class="row">
+			<div class="col-sm-4">
+		  	<img src="{% static 'images/bird.jpg' %}" style="width: 200px;height: 300px">
+		
+			</div>
+			<div class="col-sm-4">
+				<img src="{% static 'images/bird1.jpg' %}" style="width:250px;height:300px" class="img-circle">
+			</div>			
+		</div>
+</body>
+</html>
+
